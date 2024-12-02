@@ -19,6 +19,7 @@ import React from "react";
 import { SITENAME } from "@/lib/constants";
 import SearchCardList from "@/components/search/search-list";
 import doodstream from "@/lib/doodstream";
+import Script from "next/script";
 
 type PageProps = {
     params: { [key: string]: string | string[] | undefined };
@@ -87,7 +88,7 @@ const jsonLd = {
         thumbnailUrl: file.splash_img,
         description: `${file.title} di ${SITENAME} Video Bokep Indo Jepang Barat Terbaru bocil jilbab smp mama sma hijab abg colmek film tante hot`,
         url: `https://smpbugil.pages.dev/v/${file.filecode}`,
-        embedUrl: `https://${upstream}/e/${file.filecode}`,
+        embedUrl: `https://doodstream.com/e/${file.filecode}`,
         uploadDate: new Date(
             file.uploaded + ".000Z"
         ).toISOString(),
@@ -159,7 +160,7 @@ const jsonLd = {
         </section>
             <iframe
                 className="w-full h-[30vh] md:h-[55vh] lg:h-[70vh]"
-                src={`https://${upstream}/e/${file.filecode}`}
+                src={`https://doodstream.com/e/${file.filecode}`}
                 scrolling="no"
                 title={file.title}
                 frameBorder={0}
@@ -220,6 +221,7 @@ const jsonLd = {
             <h2 className="text-2xl font-bold text-center my-4">
                 Related Video {file.title}
             </h2>
+<Script src="https://js.juicyads.com/jp.php?c=947403z2v256s2x2w264x294&u=http%3A%2F%2Fwww.juicyads.rocks"/>
             <SearchCardList query={file.title.split(" ")[2]} />
         </div>
     );
